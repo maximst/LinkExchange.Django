@@ -17,16 +17,17 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 3',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
-        ],
+    ],
     license = "LGPL",
+    dependency_links=['https://github.com/maximst/LinkExchange.git#egg=LinkExchange'],
     install_requires=[
-        'LinkExchange>=0.4dev',
-        ],
+        'LinkExchange',
+    ],
     test_suite='tests',
     tests_require=[
         'phpserialize',
         'Django',
-        ],
+    ],
     entry_points="""
     [linkexchange.multihash_drivers]
     django = linkexchange_django.db_drivers:DjangoMultiHashDriver
